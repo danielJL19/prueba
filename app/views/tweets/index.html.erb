@@ -9,6 +9,7 @@
       <%= link_to "Show this tweet", tweet %>
     </p>
   <% end %>
+  <%= will_paginate @posts %>
 </div>
 
 <%= link_to "New tweet", new_tweet_path %>

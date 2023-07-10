@@ -6,3 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+10.times do |i|
+    Tweet.create(description: Faker::Markdown.emphasis , userName: Faker::Name.name)
+
+end
