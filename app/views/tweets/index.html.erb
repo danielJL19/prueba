@@ -1,7 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Tweets</h1>
 
+<h1>Tweets</h1>
+<%= search_form_for @q do |f| %>
+
+
+  <%= f.label :description_cont ,"Buscador" %>
+  <%= f.search_field :description_cont %>
+
+  <%= f.submit%>
+<% end %>
 <div id="tweets">
   <% @tweets.each do |tweet| %>
     <%= render tweet %>
@@ -9,7 +17,7 @@
       <%= link_to "Show this tweet", tweet %>
     </p>
   <% end %>
-  <%= will_paginate @posts %>
-</div>
 
+</div>
+<%= will_paginate @tweets %>
 <%= link_to "New tweet", new_tweet_path %>
